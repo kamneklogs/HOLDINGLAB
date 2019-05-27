@@ -5,8 +5,8 @@ public class Main {
 
     private Holding theHolding;
     
-public void init(){
-        //Creamos el mejor holdings
+	public void init(){
+
         
         theHolding = new Holding("El mejor holding");
         
@@ -14,7 +14,15 @@ public void init(){
     
     public Main() {
         
-    }
+	}
+	
+	public void menu(){
+
+		System.out.println("Bienvenido a la administracion del holding empresarial. ¿Qué desea hacer?");
+		System.out.println("1. Agregar nuevas empresas");
+		System.out.println("2. Generar informe de los datos de algunas empresas");
+		System.out.println("Las demas funciones estan en beta");
+	}
     
 	public static void main(String[] args) {
 	    
