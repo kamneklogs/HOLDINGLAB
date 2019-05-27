@@ -102,10 +102,11 @@ public class Holding {
 
 
 
-    public void setfCs( ArrayList<FoodC> fCs )
+    public ArrayList<FoodC> getfCs( )
     {
-        this.fCs = fCs;
+        return fCs;
     }
+
 	
 	
 	
