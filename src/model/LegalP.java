@@ -28,7 +28,6 @@ public class LegalP{
 
     }
 
-
     /** 
      * @return the name
      */

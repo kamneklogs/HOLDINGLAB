@@ -9,7 +9,7 @@ public class ProductsV {
 	
 	
 	public ProductsV(String name, String idC, double qWater, int qUnits) {
-		super();
+		
 		this.name = name;
 		this.idC = idC;
 		this.qWater = qWater;
