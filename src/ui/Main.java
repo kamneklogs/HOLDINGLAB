@@ -6,7 +6,7 @@ public class Main {
     private Holding theHolding;
     
 public void init(){
-        //Creamos el mejor holding
+        //Creamos el mejor holdings
         
         theHolding = new Holding("El mejor holding");
         
