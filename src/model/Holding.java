@@ -4,7 +4,7 @@ import java.util.*;
 public class Holding {
     
     
-//jsnj
+
 	private String name;
 	
 	
@@ -12,6 +12,7 @@ public class Holding {
 	private ArrayList<EducationC> eCs;
 	private ArrayList<VariousPC> vCs;
 	private ArrayList<MedicineC> mCs;
+    private ArrayList<FoodC> fCs;
 	
 	
 	
@@ -19,6 +20,12 @@ public class Holding {
 	public Holding(String name) {
 		
 		this.name = name;
+        tCs = new ArrayList<TechnologyC>();
+        eCs = new ArrayList<EducationC>();
+        vCs = new ArrayList<VariousPC>();
+        mCs = new ArrayList<MedicineC>();
+        fCs = new ArrayList<FoodC>();
+
 	}
 	
 	
@@ -88,6 +95,17 @@ public class Holding {
     }
 	
 	
+     public void setfCs( ArrayList<FoodC> fCs )
+    {
+        this.fCs = fCs;
+    }
+
+
+
+    public void setfCs( ArrayList<FoodC> fCs )
+    {
+        this.fCs = fCs;
+    }
 	
 	
 	
