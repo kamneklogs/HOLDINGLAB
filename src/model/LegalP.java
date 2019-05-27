@@ -1,20 +1,28 @@
 package model;
 
-public class LegalP{
-    
+public class LegalP {
+
+    /*static final String ACSP = "AGRICULTURA, CAZA, SILVICULTURA Y PEZCA ";
+    static final String EMC = "EXPLOTACION DE MINAS Y CANTERAS ";
+    static final String IM = "INDUSTRIA MANOFACTURERA";
+    static final String EGV = "ELECTRICIDAD, GAS Y VAPOR";
+    static final String C = "CONSTRUCCION";
+    static final String CAPYM = "COMERCIO AL POR MAYOR Y AL POR MENOR";
+    static final String TAC = "TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES";
+    static final String FSIC = "EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS ";
+    static final String CS = "COMUNALES, SOCIALES";*/
 
     protected String name;
     protected String nit;
     protected String adress;
-    protected String phone; 
+    protected String phone;
     protected String dateCreation;
     protected String typeC;
     protected String nameLR;
     protected int qEmployees;
     protected double assets;
 
-
-    public LegalP(String name, String nit, String adress, String phone, String dateCreation, String typeC, String nameLR, int qEmployees, double assets){
+    public LegalP(String name, String nit, String adress, String phone, String dateCreation, String typeC, String nameLR, int qEmployees, double assets) {
         this.name = name;
         this.nit = nit;
         this.adress = adress;
@@ -25,10 +33,9 @@ public class LegalP{
         this.qEmployees = qEmployees;
         this.assets = assets;
 
-
     }
 
-    /** 
+    /**
      * @return the name
      */
     public String getName() {
@@ -153,6 +160,5 @@ public class LegalP{
     public void setAssets(double assets) {
         this.assets = assets;
     }
-    
-    
+
 }

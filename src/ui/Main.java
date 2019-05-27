@@ -4,6 +4,21 @@ import java.util.*;
 
 public class Main {
 
+	static final String ACSP = "AGRICULTURA, CAZA, SILVICULTURA Y PEZCA ";
+    static final String EMC = "EXPLOTACION DE MINAS Y CANTERAS ";
+    static final String IM = "INDUSTRIA MANOFACTURERA";
+    static final String EGV = "ELECTRICIDAD, GAS Y VAPOR";
+    static final String C = "CONSTRUCCION";
+    static final String CAPYM ="COMERCIO AL POR MAYOR Y AL POR MENOR";
+    static final String TAC = "TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES";
+    static final String FSIC = "EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS ";
+	static final String CS = "COMUNALES, SOCIALES";
+
+	static int option, cT;
+	String name ,nit, adress, phone, dateCreation, typeC, nameLR;
+	double assets, qEmployees;
+	static Scanner a = new Scanner(System.in);
+	
     private Holding theHolding;
     
 	
@@ -11,6 +26,7 @@ public class Main {
     public Main() {
 
 		theHolding = new Holding("El mejor holding");
+		
 
         
 	}
@@ -23,16 +39,19 @@ public class Main {
 		System.out.println("3. Agregar empresas del tipo Fabricacion de alimentos");
 		System.out.println("4. Salir del programa.");
 	}
-    
+
 	public static void main(String[] args) {
 	    
 	    Main m = new Main();
-	    Scanner a = new Scanner(System.in);
+	    
 		System.out.println(" _________________________________________________________ ");
 		System.out.println("|                                                         |");
 		System.out.println("|                      HOLDING EMPRESARIAL                |");   
 		System.out.println("|_________________________________________________________| \n");
-		int option;
+		
+		
+		
+
 		do{
 			m.menu();
 		option = a.nextInt();
@@ -45,7 +64,7 @@ public class Main {
 			 	System.out.println("Este es el menu para agregar una nueva empresa:\n");
 				System.out.println("Por favor, ingrese el tipo de empresa a registrar:");
 				System.out.println("1. Tecnologica");
-				System.out.println("2. De Educación");
+				System.out.println("2. De Educacion");
 				System.out.println("3. Fabricacion de productos varios");
 				System.out.println("4. Fabricacion de medicamentos");
 				System.out.println("5. Fabricacion de alimentos \n");
@@ -53,8 +72,12 @@ public class Main {
 
 				option = a.nextInt();
 				while(option != 0){
-					if(option == 1){
-						System.out.println("prueba");
+					switch (option){
+						case 1:
+
+							m.editLegalP();
+
+						break;
 					}
 				}
 
