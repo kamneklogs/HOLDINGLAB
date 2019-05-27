@@ -1,6 +1,7 @@
 package model;
 import java.util.*;
 public class TechnologyC extends LegalP{
+    
 	
 	private ArrayList<String> providedS;
 
