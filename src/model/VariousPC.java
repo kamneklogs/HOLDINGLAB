@@ -1,4 +1,4 @@
-mpackage model;
+package model;
 import java.util.*;
 
 public class VariousPC extends LegalP {

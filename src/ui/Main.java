@@ -14,10 +14,11 @@ public class Main {
     static final String FSIC = "EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS ";
 	static final String CS = "COMUNALES, SOCIALES";
 
-	static int option, option1, option2, option3, cT, iterator, iterator2, qEmployees, yearsA, ranking, qStudents12, qTStudents, qUnits;
+	static int option, option1, option2, option3, option4, option5, cT, iterator, iterator1, iterator2, qEmployees, yearsA, ranking, qStudents12, qTStudents, qUnits;
 	static String name ,nit, adress, phone, dateCreation, typeC, nameLR, providedS, idMEN, directorN, educationS, nameP, idC;
 	static double assets, qWater;
 	static boolean centinel = false;
+	static boolean centinel1 = false;
 	static Scanner a = new Scanner(System.in);
 
 	
@@ -232,9 +233,34 @@ public class Main {
 							do{
 								m.editLegalP();
 								m.theHolding.getvCs().add(new VariousPC(name, nit, adress, phone, dateCreation, typeC, nameLR, qEmployees, assets));
+								System.out.println("A continuacion se le solicitara algunos datos del numero de productos que manofactura:\n");
+								do{
+									System.out.println("Ingrese el nombre del producto: ");
+									nameP = a.nextLine();
+									System.out.println("ingrese el codigo de identificacion: ");
+									idC = a.nextLine();
+									System.out.println("Ingrese la cantidad de agua que se utilizo en su fabricacion (Litros)");
+									qWater = a.nextDouble();
+									System.out.println("Ingrese el numero de unidades de este producto que se encuentran en el inventario: ");
+									qUnits = a.nextInt();
+									iterator1 = 0;
+									while(iterator1 < m.theHolding.gettCs().size() && centinel1 == false){
+									
+										if(m.theHolding.getvCs().get(iterator1).getName().equals(name)== true){
+											m.theHolding.getvCs().get(iterator1).getProducts().add(new ProductsV(nameP, idC, qWater, qUnits));
+											centinel = true;
+										}
+										iterator1++;	
+									}
+									System.out.println("¿Desea agregar mas productos?\n1. Si\n2. No");
+									option4 = a.nextInt();
+
+								}while(option4 == 1);
+								System.out.println("¿Desea agregar mas empresas de Fabricacion?\n1. Si\n2. No");
+								option5 = a.nextInt();
 								
 
-							}while();
+							}while(option5 == 1);
 						break;
 					}
 				}
