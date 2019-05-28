@@ -2,15 +2,7 @@ package model;
 
 public class LegalP {
 
-    /*static final String ACSP = "AGRICULTURA, CAZA, SILVICULTURA Y PEZCA ";
-    static final String EMC = "EXPLOTACION DE MINAS Y CANTERAS ";
-    static final String IM = "INDUSTRIA MANOFACTURERA";
-    static final String EGV = "ELECTRICIDAD, GAS Y VAPOR";
-    static final String C = "CONSTRUCCION";
-    static final String CAPYM = "COMERCIO AL POR MAYOR Y AL POR MENOR";
-    static final String TAC = "TRANSPORTE, ALMACENAMIENTO Y COMUNICACIONES";
-    static final String FSIC = "EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS ";
-    static final String CS = "COMUNALES, SOCIALES";*/
+   
 
     protected String name;
     protected String nit;

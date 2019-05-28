@@ -7,7 +7,7 @@ public class TechnologyC extends LegalP{
 
 	public TechnologyC(String name, String nit, String adress, String phone, String dateCreation, String typeC, String nameLR, int qEmployees, double assets){
 		super( name, nit, adress, phone, dateCreation, typeC, nameLR, qEmployees, assets);
-		
+		providedS = new ArrayList<String>();
 	}
 
 	public ArrayList<String> getProvidedS() {

@@ -10,7 +10,6 @@ public class EducationC extends LegalP{
 	private int qStudents12;
 	private int qTStudents;
 	
-	//hjdsbj
     public EducationC( String name, String nit, String adress, String phone, String dateCreation, String typeC, String nameLR, int qEmployees, double assets, String idMEN, int yearsA, int ranking, String directorN, String educationS, int qStudents12, int qTStudents)
     {
         super( name, nit, adress, phone, dateCreation, typeC, nameLR, qEmployees, assets );
