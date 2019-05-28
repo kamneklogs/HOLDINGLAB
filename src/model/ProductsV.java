@@ -2,28 +2,28 @@ package model;
 
 public class ProductsV {
 	
-	private String name;
+	private String nameP;
 	private String idC;
 	private double qWater;
 	private int qUnits;
 	
 	
-	public ProductsV(String name, String idC, double qWater, int qUnits) {
+	public ProductsV(String nameP, String idC, double qWater, int qUnits) {
 		
-		this.name = name;
+		this.nameP = nameP;
 		this.idC = idC;
 		this.qWater = qWater;
 		this.qUnits = qUnits;
 	}
 
 
-	public String getName() {
-		return name;
+	public String getNameP() {
+		return nameP;
 	}
 
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String nameP) {
+		this.nameP = nameP;
 	}
 
 
