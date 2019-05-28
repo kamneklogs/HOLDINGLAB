@@ -19,6 +19,7 @@ public class Main {
 	static double assets, qWater;
 	static boolean centinel = false;
 	static boolean centinel1 = false;
+	
 	static Scanner a = new Scanner(System.in);
 
 	
@@ -35,7 +36,7 @@ public class Main {
 	
 	public void menu(){
 
-		System.out.println("Bienvenido a la administracion del holding empresarial.¿Que desea hacer?");
+		System.out.println("Bienvenido a la administracion del holding empresarial. Que desea hacer?");
 		System.out.println("1. Agregar nuevas empresas");
 		System.out.println("2. Generar informe de los datos de algunas empresas");
 		System.out.println("3. Agregar empresas del tipo Fabricacion de alimentos");
@@ -237,6 +238,7 @@ public class Main {
 								do{
 									System.out.println("Ingrese el nombre del producto: ");
 									nameP = a.nextLine();
+									nameP = a.nextLine();
 									System.out.println("ingrese el codigo de identificacion: ");
 									idC = a.nextLine();
 									System.out.println("Ingrese la cantidad de agua que se utilizo en su fabricacion (Litros)");
@@ -244,15 +246,22 @@ public class Main {
 									System.out.println("Ingrese el numero de unidades de este producto que se encuentran en el inventario: ");
 									qUnits = a.nextInt();
 									iterator1 = 0;
-									while(iterator1 < m.theHolding.gettCs().size() && centinel1 == false){
+									centinel1 = false;
+									while(iterator1 < m.theHolding.getvCs().size() && centinel1 == false){
 									
 										if(m.theHolding.getvCs().get(iterator1).getName().equals(name)== true){
-											m.theHolding.getvCs().get(iterator1).getProducts().add(new ProductsV(nameP, idC, qWater, qUnits));
+											
+											m.theHolding.getvCs().get(0).getProducts().add(new ProductsV(nameP, idC, qWater, qUnits));
+											System.out.println("Entro a agregar productos");
 											centinel = true;
 										}
 										iterator1++;	
 									}
-									System.out.println("¿Desea agregar mas productos?\n1. Si\n2. No");
+									if(m.theHolding.getvCs() != null){
+										System.out.println("Numero de productos hasta ahora: " + m.theHolding.getvCs().get(0).getProducts().size());
+									}
+									//System.out.println("Numero de productos hasta ahora: " + m.theHolding.getvCs().get(0).getProducts().size());
+									System.out.println("Desea agregar mas productos?\n1. Si\n2. No");
 									option4 = a.nextInt();
 
 								}while(option4 == 1);
