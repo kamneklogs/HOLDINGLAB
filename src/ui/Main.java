@@ -2,7 +2,7 @@ package ui;
 import model.*;
 import java.util.*;
 
-public class Main {
+public class Main { 
 
 	static final String ACSP = "AGRICULTURA, CAZA, SILVICULTURA Y PEZCA ";
     static final String EMC = "EXPLOTACION DE MINAS Y CANTERAS ";
@@ -14,11 +14,12 @@ public class Main {
     static final String FSIC = "EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS ";
 	static final String CS = "COMUNALES, SOCIALES";
 
-	static int option, option1, option2, option3, option4, option5, optStatus, optMod, cT, iterator, iterator1, iterator2, iterator3, qEmployees, yearsA, ranking, qStudents12, qTStudents, qUnits;
+	static int option, option1, option2, option3, option4, option5, option6, option7, optStatus, optMod, cT, iterator, iterator1, iterator2, iterator3, iterator4, qEmployees, yearsA, ranking, qStudents12, qTStudents, qUnits;
 	static String name ,nit, adress, phone, dateCreation, typeC, nameLR, providedS, idMEN, directorN, educationS, nameP, idC, sanitaryR, expiration, modality;
 	static double assets, qWater;
 	static boolean centinel = false;
 	static boolean centinel1 = false;
+	static boolean centinel2 = false;
 	static boolean status;
 
 	static Scanner a = new Scanner(System.in);
@@ -98,6 +99,7 @@ public class Main {
 							qEmployees = a.nextInt();
 							System.err.println("Ingrese los activos (en pesos)");
 							assets = a.nextDouble();
+							System.out.println("");
 
 	}
     
@@ -251,7 +253,7 @@ public class Main {
 									
 										if(m.theHolding.getvCs().get(iterator1).getName().equals(name)== true){
 											System.out.println("Tamano de la lista de VP: " + m.theHolding.getvCs().size());
-											System.err.println("Valor del iterador: " + iterator1);
+											System.out.println("Valor del iterador: " + iterator1);
 											System.out.println("Entro a agregar productos");
 											m.theHolding.getvCs().get(iterator1).getProducts().add(new ProductsV(nameP, idC, qWater, qUnits));
 											centinel = true;
@@ -272,40 +274,59 @@ public class Main {
 							}while(option5 == 1);
 						break;
 						case 4:
-							m.editLegalP();
-							m.theHolding.getmCs().add(new MedicineC(name, nit, adress, phone, dateCreation, typeC, nameLR, qEmployees, assets));
-							System.out.println("A continuacion se le pediran los datos de los medicamentos que comercializa: \n");
-							/*do{
-								System.out.println("Ingrese el No. de registro sanitario:");
-								sanitaryR = a.nextLine();
-								System.out.println("Ingrese el estado de la licencia:\n1. Vigente\n2. No renovado");
-								optStatus = a.nextInt();
-								switch(optStatus){
-									case 1:
-										status = true;
-									break;
-									case 2:
-										status = false;
-									break;
-								}
-								System.out.println("Ingrese la fecha de expiracion (MM-AAAA):");
-								expiration = a.nextLine();
-								System.out.println("Ingrese la modalidad:\n1. Fabricar y exportar\n2. Fabricar y vender\n3. Importar y vender");
-								optMod = a.nextInt();
-								switch(optMod){
-									case 1:
-										modality = "Fabricar y exportar";
-									break;
-									case 2:
-										modality = "Fabricar y vender";
-									break;
-									case 3:
-										modality = "Importar y vender";
-									break;
-								}
+							do{
+								m.editLegalP();
+								m.theHolding.getmCs().add(new MedicineC(name, nit, adress, phone, dateCreation, typeC, nameLR, qEmployees, assets));
+								System.out.println("A continuacion se le pediran los datos de los medicamentos que comercializa: \n");
+								do{
+									System.out.println("Ingrese el No. de registro sanitario:");
+									sanitaryR = a.next();
+									System.out.println("Ingrese el estado de la licencia:\n1. Vigente\n2. No renovado");
+									optStatus = a.nextInt();
+									switch(optStatus){
+										case 1:
+											status = true;
+										break;
+										case 2:
+											status = false;
+										break;
+									}
+									System.out.println("Ingrese la fecha de expiracion (MM-AAAA):");
+									expiration = a.next();
+									System.out.println("Ingrese la modalidad:\n1. Fabricar y exportar\n2. Fabricar y vender\n3. Importar y vender");
+									optMod = a.nextInt();
+									switch(optMod){
+										case 1:
+											modality = "Fabricar y exportar";
+										break;
+										case 2:
+											modality = "Fabricar y vender";
+										break;
+										case 3:
+											modality = "Importar y vender";
+										break;
+									}
+								centinel2 = false;
+								iterator4 = 0;
+								while(iterator4 < m.theHolding.getmCs().size() && centinel2 == false){
 
-							
-							}while();*/
+									if(m.theHolding.getmCs().get(iterator4).getName().equals(name)== true){
+										System.out.println("Tamano de la lista de M: " + m.theHolding.getmCs().size());
+										System.out.println("Tamano de la lista de M: " + m.theHolding.getmCs().get(iterator4).getmPs().size());
+										System.out.println("Valor del iterador: " + iterator4);
+										System.out.println("Entro a agregar productos");
+										m.theHolding.getmCs().get(iterator4).getmPs().add(new MProducts(sanitaryR, status, expiration, modality));
+										centinel = true;
+									}
+									iterator4++;	
+								}
+								System.out.println("¿Desea agregar mas medicamentos?\n1. Si\n2. No");
+								option6 = a.nextInt();
+								}while(option6 == 1);
+								System.out.println("¿Desea agregar mas empresas farmaceuticas?\n1. Si\n2. No");
+								option7 = a.nextInt();
+
+							}while(option7 == 1);
 
 						break;
 					}
@@ -324,6 +345,7 @@ public class Main {
 
 		}
 		}while(option != 4);
+		
 		
 
 			
