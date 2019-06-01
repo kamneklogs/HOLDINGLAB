@@ -22,9 +22,65 @@ public class EducationC extends LegalP{
         this.qTStudents = qTStudents;
         
     }
+
+    public String getIdMEN() {
+        return idMEN;
+    }
+
+    public void setIdMEN(String idMEN) {
+        this.idMEN = idMEN;
+    }
+
+    public int getYearsA() {
+        return yearsA;
+    }
+
+    public void setYearsA(int yearsA) {
+        this.yearsA = yearsA;
+    }
+
+    public int getRanking() {
+        return ranking;
+    }
+
+    public void setRanking(int ranking) {
+        this.ranking = ranking;
+    }
+
+    public String getDirectorN() {
+        return directorN;
+    }
+
+    public void setDirectorN(String directorN) {
+        this.directorN = directorN;
+    }
+
+    public String getEducationS() {
+        return educationS;
+    }
+
+    public void setEducationS(String educationS) {
+        this.educationS = educationS;
+    }
+
+    public int getqStudents12() {
+        return qStudents12;
+    }
+
+    public void setqStudents12(int qStudents12) {
+        this.qStudents12 = qStudents12;
+    }
+
+    public int getqTStudents() {
+        return qTStudents;
+    }
+
+    public void setqTStudents(int qTStudents) {
+        this.qTStudents = qTStudents;
+    }
 	
 	
-	
+    
 	
 	
 	

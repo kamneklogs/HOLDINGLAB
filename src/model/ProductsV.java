@@ -55,6 +55,10 @@ public class ProductsV {
 	public void setqUnits(int qUnits) {
 		this.qUnits = qUnits;
 	}
+
+	public void setNameP(String nameP) {
+		this.nameP = nameP;
+	}
 	
 	
 	

@@ -18,5 +18,29 @@ public class FoodC extends LegalP{
 
     }
 
+    public int getInvCode() {
+        return invCode;
+    }
+
+    public void setInvCode(int invCode) {
+        this.invCode = invCode;
+    }
+
+    public boolean isSanitaryPer() {
+        return sanitaryPer;
+    }
+
+    public void setSanitaryPer(boolean sanitaryPer) {
+        this.sanitaryPer = sanitaryPer;
+    }
+
+    public String getfType() {
+        return fType;
+    }
+
+    public void setfType(String fType) {
+        this.fType = fType;
+    }
+
 
 }

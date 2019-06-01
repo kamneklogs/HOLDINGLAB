@@ -346,7 +346,7 @@ public class Main {
             default:
 
 		}
-		}while(option != 4);
+		}while(option == 4);//Corregir option !=4
 		
 		
 
