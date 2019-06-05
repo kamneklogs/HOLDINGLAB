@@ -2,7 +2,7 @@ package model;
 
 import java.util.*;
 
-public class VariousPC extends LegalP {
+public class VariousPC extends LegalP implements Read{
 
 	private ArrayList<ProductsV> products;
 

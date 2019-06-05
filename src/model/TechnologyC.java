@@ -2,7 +2,7 @@ package model;
 
 import java.util.*;
 
-public class TechnologyC extends LegalP {
+public class TechnologyC extends LegalP implements Read{
 
 	private ArrayList<String> providedS;
 

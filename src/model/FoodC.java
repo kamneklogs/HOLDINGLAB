@@ -1,6 +1,6 @@
 package model;
 
-public class FoodC extends LegalP {
+public class FoodC extends LegalP implements Read{
 
     private int invCode;
     private boolean sanitaryPer;

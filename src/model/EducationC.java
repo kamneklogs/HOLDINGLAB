@@ -1,6 +1,6 @@
 package model;
 
-public class EducationC extends LegalP {
+public class EducationC extends LegalP implements Read{
 
     private String idMEN;
     private int yearsA;

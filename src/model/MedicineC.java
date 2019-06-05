@@ -2,7 +2,7 @@ package model;
 
 import java.util.*;
 
-public class MedicineC extends LegalP {
+public class MedicineC extends LegalP implements Read{
 
     private ArrayList<MProducts> mPs;
 
