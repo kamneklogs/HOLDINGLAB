@@ -341,7 +341,18 @@ public class Main {
 
 						} while (option7 == 1);
 
-						break;
+					break;
+					case 5:
+						do{
+							m.editLegalP();
+							do{
+								System.out.println("Ingrese No. de permiso INVIMA:");
+								
+							}
+						}
+						
+					break;
+
 					}
 				}
 

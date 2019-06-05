@@ -4,15 +4,16 @@ public class FoodC extends LegalP {
 
     private int invCode;
     private boolean sanitaryPer;
-    private String fType;
+    private boolean foodHandling;
 
     public FoodC(String name, String nit, String adress, String phone, String dateCreation, String typeC, String nameLR,
-            int qEmployees, double assets, int invCode, boolean sanitaryPer, String fType) {
+            int qEmployees, double assets, int invCode, boolean sanitaryPer, boolean foodHandling) {
 
         super(name, nit, adress, phone, dateCreation, typeC, nameLR, qEmployees, assets);
         this.invCode = invCode;
         this.sanitaryPer = sanitaryPer;
-        this.fType = fType;
+        this.foodHandling = foodHandling;
+       
 
     }
 
@@ -32,12 +33,21 @@ public class FoodC extends LegalP {
         this.sanitaryPer = sanitaryPer;
     }
 
-    public String getfType() {
-        return fType;
+    /**
+     * @return the foodHandling
+     */
+    public boolean isFoodHandling() {
+        return foodHandling;
     }
 
-    public void setfType(String fType) {
-        this.fType = fType;
+    /**
+     * @param foodHandling the foodHandling to set
+     */
+    public void setFoodHandling(boolean foodHandling) {
+        this.foodHandling = foodHandling;
     }
 
+
+
+    
 }
