@@ -6,7 +6,7 @@ public class MProducts {
 	private boolean status;
 	private String expiration;
 	private String modality;
-	
+
 	public MProducts(String sanitaryR, boolean status, String expiration, String modality) {
 		super();
 		this.sanitaryR = sanitaryR;
@@ -46,7 +46,5 @@ public class MProducts {
 	public void setModality(String modality) {
 		this.modality = modality;
 	}
-	
-	
-	
+
 }

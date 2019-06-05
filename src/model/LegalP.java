@@ -2,8 +2,6 @@ package model;
 
 public class LegalP {
 
-   
-
     protected String name;
     protected String nit;
     protected String adress;
@@ -14,7 +12,8 @@ public class LegalP {
     protected int qEmployees;
     protected double assets;
 
-    public LegalP(String name, String nit, String adress, String phone, String dateCreation, String typeC, String nameLR, int qEmployees, double assets) {
+    public LegalP(String name, String nit, String adress, String phone, String dateCreation, String typeC,
+            String nameLR, int qEmployees, double assets) {
         this.name = name;
         this.nit = nit;
         this.adress = adress;

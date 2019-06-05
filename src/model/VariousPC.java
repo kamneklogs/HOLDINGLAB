@@ -1,4 +1,5 @@
 package model;
+
 import java.util.*;
 
 public class VariousPC extends LegalP {
@@ -18,10 +19,5 @@ public class VariousPC extends LegalP {
 	public void setProducts(ArrayList<ProductsV> products) {
 		this.products = products;
 	}
-	
-	
-	
-	
-	
-	
+
 }
