@@ -1,8 +1,8 @@
 package model;
 
-import java.util.*;
+import java.util.ArrayList;
 
-public class VariousPC extends LegalP implements Read{
+public class VariousPC extends LegalP{
 
 	private ArrayList<ProductsV> products;
 
@@ -20,4 +20,10 @@ public class VariousPC extends LegalP implements Read{
 		this.products = products;
 	}
 
-}
+	@Override
+    public String toString() {
+        return super.parcialToString()+"\n No. de productos: " + products.size();
+    }
+
+		
+	}

@@ -1,6 +1,6 @@
 package model;
 
-public class EducationC extends LegalP implements Read{
+public class EducationC extends LegalP implements Taxes {
 
     private String idMEN;
     private int yearsA;
@@ -79,5 +79,22 @@ public class EducationC extends LegalP implements Read{
     public void setqTStudents(int qTStudents) {
         this.qTStudents = qTStudents;
     }
+
+    @Override
+    public String toString() {
+        return super.parcialToString() + "\n" + idMEN + "\n" + yearsA + "\n" + ranking + "\n" + directorN + "\n" + educationS
+                + "\n" + qStudents12 + "\n" + qTStudents + "\n" + tProCultura();
+    }
+
+    public String tProCultura() {
+        double proC = 20;
+        String tProC = " ";
+        proC = proC - (qStudents12/qTStudents)*100;
+        tProC = "Impuesto ProCultura: "+ proC + "%";
+        return tProC;
+    }
+
+
+
 
 }

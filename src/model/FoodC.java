@@ -1,6 +1,6 @@
 package model;
 
-public class FoodC extends LegalP implements Read{
+public class FoodC extends LegalP{
 
     private int invCode;
     private boolean sanitaryPer;
@@ -45,6 +45,11 @@ public class FoodC extends LegalP implements Read{
      */
     public void setFoodHandling(boolean foodHandling) {
         this.foodHandling = foodHandling;
+    }
+
+    @Override
+    public String toString() {
+        return super.parcialToString()+"\n"+invCode+"\n"+sanitaryPer+"n"+foodHandling;
     }
 
 

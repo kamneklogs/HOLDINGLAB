@@ -2,7 +2,7 @@ package model;
 
 import java.util.*;
 
-public class MedicineC extends LegalP implements Read{
+public class MedicineC extends LegalP{
 
     private ArrayList<MProducts> mPs;
 
@@ -20,5 +20,11 @@ public class MedicineC extends LegalP implements Read{
     public void setmPs(ArrayList<MProducts> mPs) {
         this.mPs = mPs;
     }
+
+    @Override
+    public String toString() {
+        return super.parcialToString()+"\n No. de Medicamentos" + mPs.size();
+    }
+
 
 }

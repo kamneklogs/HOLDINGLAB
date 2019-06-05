@@ -1,6 +1,6 @@
 package model;
 
-public class MProducts implements Read {
+public class MProducts{
 
 	private String sanitaryR;
 	private boolean status;

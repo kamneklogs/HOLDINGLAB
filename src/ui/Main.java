@@ -24,7 +24,7 @@ public class Main {
 	static boolean centinel1 = false;
 	static boolean centinel2 = false;
 	static boolean status;
-	static boolean sanitaryPer, foodHandling;
+	static boolean sanitaryPer, foodHandling, backMenu;
 	
 
 	static Scanner a = new Scanner(System.in);
@@ -42,7 +42,6 @@ public class Main {
 		System.out.println("Bienvenido a la administracion del holding empresarial. Que desea hacer?");
 		System.out.println("1. Agregar nuevas empresas");
 		System.out.println("2. Generar informe de los datos de algunas empresas");
-		System.out.println("3. Agregar empresas del tipo Fabricacion de alimentos");
 		System.out.println("4. Salir del programa.");
 	}
 
@@ -116,9 +115,12 @@ public class Main {
 		System.out.println("|_________________________________________________________| \n");
 
 		do {
+			
 			m.menu();
-			option = a.nextInt();
+			
 
+			option = a.nextInt();
+			
 			switch (option) {
 			case 1:
 
@@ -377,21 +379,20 @@ public class Main {
 					break;
 
 					}
+					option = 0;
 				}
 
 				break;
 
 			case 2:
-
+				System.out.println(m.theHolding.supeString());
 				break;
 
-			case 3:
-
-				break;
-			default:
+			
 
 			}
-		} while (option == 4);// Corregir option !=4
+			backMenu = true;
+		} while (backMenu);
 
 	}
 

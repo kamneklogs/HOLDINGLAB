@@ -2,7 +2,7 @@ package model;
 
 import java.util.*;
 
-public class TechnologyC extends LegalP implements Read{
+public class TechnologyC extends LegalP{
 
 	private ArrayList<String> providedS;
 
@@ -20,4 +20,8 @@ public class TechnologyC extends LegalP implements Read{
 		this.providedS = providedS;
 	}
 
+	@Override
+    public String toString() {
+        return super.parcialToString()+" \nNo. de servicios prestados: " + providedS.size();
+    }
 }

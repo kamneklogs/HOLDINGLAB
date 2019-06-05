@@ -152,4 +152,9 @@ public class LegalP {
         this.assets = assets;
     }
 
+    public String parcialToString() {
+        return name + "\n" + nit + "\n" + adress + "\n" + phone + "\n" + dateCreation + "\n" + typeC + "\n" + nameLR
+                + "\n" + qEmployees + "\n" + assets;
+    }
+
 }

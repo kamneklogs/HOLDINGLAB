@@ -71,4 +71,73 @@ public class Holding {
         return fCs;
     }
 
+    public String listCs(){
+        String finalList = " ";
+        if(tCs!=null){
+            for(int i=0 ; i<tCs.size();i++){
+                finalList += tCs.get(i).getName() + "\n";
+            }
+        }
+
+        if(eCs!=null){
+            for(int i=0; i<eCs.size();i++){
+                finalList += tCs.get(i).getName() + "\n";
+            }
+        }
+
+        if(vCs!=null){
+            for(int i=0; i<vCs.size();i++){
+                finalList += vCs.get(i).getName() + "\n";
+            }
+        }
+
+        if(mCs!=null){
+            for(int i=0; i<mCs.size();i++){
+                finalList += mCs.get(i).getName() + "\n";
+            }
+
+        }
+        if(fCs!=null){
+            for(int i=0; i<fCs.size();i++){
+                finalList += fCs.get(i).getName() + "\n";
+            }
+        }
+       
+        return finalList;
+    }
+
+    public String supeString(){
+        String finalSuper = " ";
+        if(tCs!=null){
+            for(int i=0 ; i<tCs.size();i++){
+                finalSuper += tCs.get(i).toString() + "\n";
+            }
+        }
+
+        if(eCs!=null){
+            for(int i=0; i<eCs.size();i++){
+                finalSuper += eCs.get(i).toString() + "\n";
+            }
+        }
+
+        if(vCs!=null){
+            for(int i=0; i<vCs.size();i++){
+                finalSuper += vCs.get(i).toString() + "\n";
+            }
+        }
+
+        if(mCs!=null){
+            for(int i=0; i<mCs.size();i++){
+                finalSuper += mCs.get(i).toString() + "\n";
+            }
+
+        }
+        if(fCs!=null){
+            for(int i=0; i<fCs.size();i++){
+                finalSuper += fCs.get(i).toString() + "\n";
+            }
+        }
+        return finalSuper;
+    }
+
 }
