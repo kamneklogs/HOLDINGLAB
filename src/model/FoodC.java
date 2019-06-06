@@ -1,6 +1,6 @@
 package model;
 
-public class FoodC extends LegalP{
+public class FoodC extends LegalP {
 
     private int invCode;
     private boolean sanitaryPer;
@@ -13,7 +13,6 @@ public class FoodC extends LegalP{
         this.invCode = invCode;
         this.sanitaryPer = sanitaryPer;
         this.foodHandling = foodHandling;
-       
 
     }
 
@@ -49,10 +48,7 @@ public class FoodC extends LegalP{
 
     @Override
     public String toString() {
-        return super.parcialToString()+"\n"+invCode+"\n"+sanitaryPer+"n"+foodHandling;
+        return super.parcialToString() + "\n" + invCode + "\n" + sanitaryPer + "n" + foodHandling;
     }
 
-
-
-    
 }

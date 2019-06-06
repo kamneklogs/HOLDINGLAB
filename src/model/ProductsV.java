@@ -51,6 +51,4 @@ public class ProductsV {
 		this.nameP = nameP;
 	}
 
-	
-
 }

@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-public class VariousPC extends LegalP implements TreeTaxes{
+public class VariousPC extends LegalP implements TreeTaxes {
 
 	private ArrayList<ProductsV> products;
 
@@ -21,30 +21,31 @@ public class VariousPC extends LegalP implements TreeTaxes{
 	}
 
 	@Override
-    public String toString() {
-        return super.parcialToString()+"\n No. de productos: " + products.size() +"\n"+waterXtree()+"\n";
+	public String toString() {
+		return super.parcialToString() + "\n No. de productos: " + products.size() + "\n" + waterXtree() + "\n";
 	}
-	
+
 	@Override
 	public String waterXtree() {
 
 		String finalTQ = " ";
 		double qW = 0;
-		for(int i = 0; i<products.size();i++){
+		for (int i = 0; i < products.size(); i++) {
 			qW += products.get(i).getqWater();
 		}
 
-		if(qW >= 1 && qW< 140){
+		if (qW >= 1 && qW < 140) {
 			finalTQ = "Debe sembrar 6 arboles";
 		}
-		if(qW >= 141 && qW <800){
+		if (qW >= 141 && qW < 800) {
 			finalTQ = "Debe sembrar 25 arboles";
 		}
-		if(qW>800){
+		if (qW > 800) {
 			finalTQ = "Debe sembrar 200 arboles";
 		}
 
 		return finalTQ;
 	}
-		
-	}
+
+
+}

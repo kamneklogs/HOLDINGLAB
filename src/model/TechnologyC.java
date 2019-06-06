@@ -2,7 +2,7 @@ package model;
 
 import java.util.*;
 
-public class TechnologyC extends LegalP{
+public class TechnologyC extends LegalP {
 
 	private ArrayList<String> providedS;
 
@@ -21,7 +21,7 @@ public class TechnologyC extends LegalP{
 	}
 
 	@Override
-    public String toString() {
-        return super.parcialToString()+" \nNo. de servicios prestados: " + providedS.size();
-    }
+	public String toString() {
+		return super.parcialToString() + " \nNo. de servicios prestados: " + providedS.size();
+	}
 }

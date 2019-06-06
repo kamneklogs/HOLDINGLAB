@@ -2,7 +2,7 @@ package model;
 
 import java.util.*;
 
-public class MedicineC extends LegalP{
+public class MedicineC extends LegalP {
 
     private ArrayList<MProducts> mPs;
 
@@ -23,8 +23,7 @@ public class MedicineC extends LegalP{
 
     @Override
     public String toString() {
-        return super.parcialToString()+"\n No. de Medicamentos" + mPs.size();
+        return super.parcialToString() + "\n No. de Medicamentos" + mPs.size();
     }
-
 
 }

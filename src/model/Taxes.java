@@ -1,6 +1,7 @@
 package model;
-public interface Taxes{
-    
+
+public interface Taxes {
+
     abstract String tProCultura();
 
 }

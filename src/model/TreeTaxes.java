@@ -1,6 +1,6 @@
 package model;
 
-public interface TreeTaxes{
+public interface TreeTaxes {
 
     abstract String waterXtree();
 

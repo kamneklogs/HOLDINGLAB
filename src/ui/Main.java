@@ -15,8 +15,9 @@ public class Main {
 	static final String FSIC = "EST.F/CIEROS,SEGUROS,B.INMUEBLES,SERV. A COMPANIAS ";
 	static final String CS = "COMUNALES, SOCIALES";
 
-	static int option, option1, option2, option3, option4, option5, option6, option7, option8, optStatus, optMod, cT, iterator,
-			iterator1, iterator2, iterator3, iterator4, qEmployees, yearsA, ranking, qStudents12, qTStudents, qUnits, invCode;
+	static int option, option1, option2, option3, option4, option5, option6, option7, option8, optStatus, optMod, cT,
+			iterator, iterator1, iterator2, iterator3, iterator4, qEmployees, yearsA, ranking, qStudents12, qTStudents,
+			qUnits, invCode;
 	static String name, nit, adress, phone, dateCreation, typeC, nameLR, providedS, idMEN, directorN, educationS, nameP,
 			idC, sanitaryR, expiration, modality;
 	static double assets, qWater;
@@ -25,7 +26,6 @@ public class Main {
 	static boolean centinel2 = false;
 	static boolean status;
 	static boolean sanitaryPer, foodHandling, backMenu;
-	
 
 	static Scanner a = new Scanner(System.in);
 
@@ -115,12 +115,11 @@ public class Main {
 		System.out.println("|_________________________________________________________| \n");
 
 		do {
-			
+
 			m.menu();
-			
 
 			option = a.nextInt();
-			
+
 			switch (option) {
 			case 1:
 
@@ -329,8 +328,7 @@ public class Main {
 												"Tamano de la lista de Farmaceuticas: " + m.theHolding.getmCs().size());
 										System.out.println("Tamano de la lista de Medicamentos: "
 												+ m.theHolding.getmCs().get(iterator4).getmPs().size());
-										System.out.println("Valor del iterador: " + iterator4);
-										System.out.println("Entro a agregar productos");
+
 										m.theHolding.getmCs().get(iterator4).getmPs()
 												.add(new MProducts(sanitaryR, status, expiration, modality));
 										centinel = true;
@@ -345,38 +343,39 @@ public class Main {
 
 						} while (option7 == 1);
 
-					break;
+						break;
 					case 5:
-						do{
+						do {
 							m.editLegalP();
 							System.out.println("Ingrese No. de permiso INVIMA:");
 							invCode = a.nextInt();
 							System.out.println("Permiso sanitario:\n1. Vigente\n2. No vigente");
 							option8 = a.nextInt();
-							switch (option8){
-								case 1:
-									sanitaryPer = true;
+							switch (option8) {
+							case 1:
+								sanitaryPer = true;
 								break;
-								case 2:
-									sanitaryPer = false;
+							case 2:
+								sanitaryPer = false;
 								break;
 							}
 							System.out.println("Certificado de Manipulacion de Alimentos:\n1. Si\n2. No");
 							option8 = a.nextInt();
-							switch (option8){
-								case 1:
-									foodHandling = true;
+							switch (option8) {
+							case 1:
+								foodHandling = true;
 								break;
-								case 2:
-									foodHandling = false;
+							case 2:
+								foodHandling = false;
 								break;
 							}
-							m.theHolding.getfCs().add(new FoodC( name, nit, adress, phone, dateCreation, typeC, nameLR, qEmployees, assets, invCode, sanitaryPer, foodHandling));
+							m.theHolding.getfCs().add(new FoodC(name, nit, adress, phone, dateCreation, typeC, nameLR,
+									qEmployees, assets, invCode, sanitaryPer, foodHandling));
 							System.out.println("Desea agregar mas empresas de comestibles?\n1. Si\n2. No");
-							option8 = a.nextInt();		
-						}while(option8==1);
-						
-					break;
+							option8 = a.nextInt();
+						} while (option8 == 1);
+
+						break;
 
 					}
 					option = 0;
@@ -387,8 +386,6 @@ public class Main {
 			case 2:
 				System.out.println(m.theHolding.supeRString());
 				break;
-
-			
 
 			}
 			backMenu = true;

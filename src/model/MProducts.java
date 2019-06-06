@@ -1,6 +1,6 @@
 package model;
 
-public class MProducts{
+public class MProducts {
 
 	private String sanitaryR;
 	private boolean status;
