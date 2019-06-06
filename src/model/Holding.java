@@ -106,34 +106,39 @@ public class Holding {
         return finalList;
     }
 
-    public String supeString(){
+    public String supeRString(){
         String finalSuper = " ";
         if(tCs!=null){
             for(int i=0 ; i<tCs.size();i++){
+                finalSuper += "EMPRESAS TECNOLOGICAS:\n";
                 finalSuper += tCs.get(i).toString() + "\n";
             }
         }
 
         if(eCs!=null){
             for(int i=0; i<eCs.size();i++){
+                finalSuper += "INSTITUCIONES EDUCATIVAS:\n";
                 finalSuper += eCs.get(i).toString() + "\n";
             }
         }
 
         if(vCs!=null){
             for(int i=0; i<vCs.size();i++){
+                finalSuper += "EMPRESAS DE FABRICACION DE PRODUCTOS VARIOS:\n";
                 finalSuper += vCs.get(i).toString() + "\n";
             }
         }
 
         if(mCs!=null){
             for(int i=0; i<mCs.size();i++){
+                finalSuper += "EMPRESAS FARMACEUTICAS:\n";
                 finalSuper += mCs.get(i).toString() + "\n";
             }
 
         }
         if(fCs!=null){
             for(int i=0; i<fCs.size();i++){
+                finalSuper += "EMPRESAS DE COMESTIBLES:\n";
                 finalSuper += fCs.get(i).toString() + "\n";
             }
         }

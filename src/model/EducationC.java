@@ -91,6 +91,9 @@ public class EducationC extends LegalP implements Taxes {
         String tProC = " ";
         proC = proC - (qStudents12/qTStudents)*100;
         tProC = "Impuesto ProCultura: "+ proC + "%";
+        if(proC<0){
+            tProC = "Exhimido de impuesto";
+        }
         return tProC;
     }
 

@@ -385,7 +385,7 @@ public class Main {
 				break;
 
 			case 2:
-				System.out.println(m.theHolding.supeString());
+				System.out.println(m.theHolding.supeRString());
 				break;
 
 			
