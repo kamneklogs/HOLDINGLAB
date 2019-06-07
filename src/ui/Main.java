@@ -139,7 +139,6 @@ public class Main {
 				System.out.println("#   0. Volver al menu anterior                            #");
 				System.out.println("###########################################################\n");
 
-
 				option = a.nextInt();
 				while (option != 0) {
 					switch (option) {
@@ -392,7 +391,7 @@ public class Main {
 				break;
 
 			case 2:
-			
+
 				System.out.println("<*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*>");
 				System.out.println(m.theHolding.supeRString());
 				System.out.println("<*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*>\n");
@@ -400,11 +399,13 @@ public class Main {
 				break;
 
 			}
-			
-			System.out.println("Escoja la opcion que desea realizar?\n1. Cerrar el programa.\n2. Volver al menu principal.");
+
+			System.out.println(
+					"Escoja la opcion que desea realizar?\n1. Cerrar el programa.\n2. Volver al menu principal.");
 			backMenu = a.nextInt();
-			if(backMenu == 1){
-				System.out.println("Created by Cristhian Camilo Gutierrez Cordoba\nInfo and cheaps services : kamneklogs@gmail.com :3");
+			if (backMenu == 1) {
+				System.out.println(
+						"Created by Cristhian Camilo Gutierrez Cordoba\nInfo and cheaps services : kamneklogs@gmail.com :3");
 			}
 		} while (backMenu != 1);
 
