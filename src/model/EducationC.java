@@ -7,12 +7,12 @@ public class EducationC extends LegalP implements Taxes {
     private int ranking;
     private String directorN;
     private String educationS;
-    private int qStudents12;
-    private int qTStudents;
+    private double qStudents12;
+    private double qTStudents;
 
     public EducationC(String name, String nit, String adress, String phone, String dateCreation, String typeC,
             String nameLR, int qEmployees, double assets, String idMEN, int yearsA, int ranking, String directorN,
-            String educationS, int qStudents12, int qTStudents) {
+            String educationS, double qStudents12, double qTStudents) {
         super(name, nit, adress, phone, dateCreation, typeC, nameLR, qEmployees, assets);
         this.idMEN = idMEN;
         this.yearsA = yearsA;
@@ -64,19 +64,19 @@ public class EducationC extends LegalP implements Taxes {
         this.educationS = educationS;
     }
 
-    public int getqStudents12() {
+    public double getqStudents12() {
         return qStudents12;
     }
 
-    public void setqStudents12(int qStudents12) {
+    public void setqStudents12(double qStudents12) {
         this.qStudents12 = qStudents12;
     }
 
-    public int getqTStudents() {
+    public double getqTStudents() {
         return qTStudents;
     }
 
-    public void setqTStudents(int qTStudents) {
+    public void setqTStudents(double qTStudents) {
         this.qTStudents = qTStudents;
     }
 
@@ -91,9 +91,9 @@ public class EducationC extends LegalP implements Taxes {
     }
 
     public String tProCultura() {
-        double proC = 20;
+        double proC = 20-((qStudents12 / qTStudents) * 100);
         String tProC = " ";
-        proC = proC - ((qStudents12 / qTStudents) * 100);
+        
         tProC = proC + "%";
         if (proC < 0) {
             tProC = "Exhimido de impuesto";

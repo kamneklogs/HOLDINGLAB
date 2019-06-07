@@ -16,8 +16,9 @@ public class Main {
 	static final String CS = "COMUNALES, SOCIALES";
 
 	static int option, option1, option2, option3, option4, option5, option6, option7, option8, optStatus, optMod, cT,
-			iterator, iterator1, iterator2, iterator3, iterator4, qEmployees, yearsA, ranking, qStudents12, qTStudents,
+			iterator, iterator1, iterator2, iterator3, iterator4, qEmployees, yearsA, ranking,
 			qUnits, invCode, backMenu;
+	static double qStudents12, qTStudents;
 	static String name, nit, adress, phone, dateCreation, typeC, nameLR, providedS, idMEN, directorN, educationS, nameP,
 			idC, sanitaryR, expiration, modality;
 	static double assets, qWater;
@@ -227,9 +228,9 @@ public class Main {
 							directorN = a.nextLine();
 							directorN = a.nextLine();
 							System.out.println("No. de estudiantes de estractos socio-economicos 1 y 2:");
-							qStudents12 = a.nextInt();
+							qStudents12 = a.nextDouble();
 							System.out.println("No. total de estudiantes:");
-							qTStudents = a.nextInt();
+							qTStudents = a.nextDouble();
 
 							m.theHolding.geteCs()
 									.add(new EducationC(name, nit, adress, phone, dateCreation, typeC, nameLR,
