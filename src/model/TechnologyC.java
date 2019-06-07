@@ -22,6 +22,6 @@ public class TechnologyC extends LegalP {
 
 	@Override
 	public String toString() {
-		return super.parcialToString() + " \nNo. de servicios prestados: " + providedS.size();
+		return super.parcialToString() + " \nNo. de servicios prestados:    " + providedS.size();
 	}
 }

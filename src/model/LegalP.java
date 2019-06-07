@@ -153,8 +153,10 @@ public class LegalP {
     }
 
     public String parcialToString() {
-        return name + "\n" + nit + "\n" + adress + "\n" + phone + "\n" + dateCreation + "\n" + typeC + "\n" + nameLR
-                + "\n" + qEmployees + "\n" + assets;
+        return "Nombre:    " + name + "\n" + "Nit:    " + nit + "\n" + "Direccion:    " + adress + "\n"
+                + "Telefono:    " + phone + "\n" + "Fecha de creacion:    " + dateCreation + "\n"
+                + "Tipo de empresa:    " + typeC + "\n" + "Nombre del representante legal:    " + nameLR + "\n"
+                + "Numero de empleados:    " + qEmployees + "\n" + "Activos (Pesos):    " + assets;
     }
 
 }

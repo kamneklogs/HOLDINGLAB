@@ -22,7 +22,7 @@ public class VariousPC extends LegalP implements TreeTaxes {
 
 	@Override
 	public String toString() {
-		return super.parcialToString() + "\n No. de productos: " + products.size() + "\n" + waterXtree() + "\n";
+		return super.parcialToString() + "\n No. de productos:    " + products.size() + "\n" +"Impuesto aguaXarbol:     "+ waterXtree() + "\n";
 	}
 
 	@Override

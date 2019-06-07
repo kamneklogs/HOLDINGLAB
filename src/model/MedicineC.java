@@ -23,7 +23,7 @@ public class MedicineC extends LegalP {
 
     @Override
     public String toString() {
-        return super.parcialToString() + "\n No. de Medicamentos" + mPs.size();
+        return super.parcialToString() + "\n No. de Medicamentos:    " + mPs.size();
     }
 
 }

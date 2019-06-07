@@ -82,15 +82,19 @@ public class EducationC extends LegalP implements Taxes {
 
     @Override
     public String toString() {
-        return super.parcialToString() + "\n" + idMEN + "\n" + yearsA + "\n" + ranking + "\n" + directorN + "\n"
-                + educationS + "\n" + qStudents12 + "\n" + qTStudents + "\n" + tProCultura();
+        return super.parcialToString() + "\n" + "No. de registro del MNE:    " + idMEN + "\n"
+                + "Anios de antiguedad:    " + yearsA + "\n"
+                + "Puesto nacional de la I.E (Segun Saber 11 o Saber Pro):    " + ranking + "\n"
+                + "Nombre del director:    " + directorN + "\n" + "No. estudiantes de estrato socioeconomico 1 y 2:    "
+                + qStudents12 + "\n" + "No. total de estudiantes:     " + qTStudents + "\n" + "Impuesto PROCULTURA:    "
+                + tProCultura();
     }
 
     public String tProCultura() {
         double proC = 20;
         String tProC = " ";
-        proC = proC - (qStudents12 / qTStudents) * 100;
-        tProC = "Impuesto ProCultura: " + proC + "%";
+        proC = proC - ((qStudents12 / qTStudents) * 100);
+        tProC = proC + "%";
         if (proC < 0) {
             tProC = "Exhimido de impuesto";
         }

@@ -110,35 +110,35 @@ public class Holding {
         String finalSuper = " ";
         if (tCs != null) {
             for (int i = 0; i < tCs.size(); i++) {
-                finalSuper += "EMPRESAS TECNOLOGICAS:\n";
+                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nEMPRESAS TECNOLOGICAS:\n****************************************************************\n";
                 finalSuper += tCs.get(i).toString() + "\n";
             }
         }
 
         if (eCs != null) {
             for (int i = 0; i < eCs.size(); i++) {
-                finalSuper += "INSTITUCIONES EDUCATIVAS:\n";
+                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nINSTITUCIONES EDUCATIVAS:\n****************************************************************\n";
                 finalSuper += eCs.get(i).toString() + "\n";
             }
         }
 
         if (vCs != null) {
             for (int i = 0; i < vCs.size(); i++) {
-                finalSuper += "EMPRESAS DE FABRICACION DE PRODUCTOS VARIOS:\n";
+                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nEMPRESAS DE FABRICACION DE PRODUCTOS VARIOS:\n****************************************************************\n";
                 finalSuper += vCs.get(i).toString() + "\n";
             }
         }
 
         if (mCs != null) {
             for (int i = 0; i < mCs.size(); i++) {
-                finalSuper += "EMPRESAS FARMACEUTICAS:\n";
+                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nEMPRESAS FARMACEUTICAS:\n****************************************************************\n";
                 finalSuper += mCs.get(i).toString() + "\n";
             }
 
         }
         if (fCs != null) {
             for (int i = 0; i < fCs.size(); i++) {
-                finalSuper += "EMPRESAS DE COMESTIBLES:\n";
+                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nEMPRESAS DE COMESTIBLES:\n****************************************************************\n";
                 finalSuper += fCs.get(i).toString() + "\n";
             }
         }

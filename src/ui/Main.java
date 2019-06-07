@@ -17,7 +17,7 @@ public class Main {
 
 	static int option, option1, option2, option3, option4, option5, option6, option7, option8, optStatus, optMod, cT,
 			iterator, iterator1, iterator2, iterator3, iterator4, qEmployees, yearsA, ranking, qStudents12, qTStudents,
-			qUnits, invCode;
+			qUnits, invCode, backMenu;
 	static String name, nit, adress, phone, dateCreation, typeC, nameLR, providedS, idMEN, directorN, educationS, nameP,
 			idC, sanitaryR, expiration, modality;
 	static double assets, qWater;
@@ -25,7 +25,7 @@ public class Main {
 	static boolean centinel1 = false;
 	static boolean centinel2 = false;
 	static boolean status;
-	static boolean sanitaryPer, foodHandling, backMenu;
+	static boolean sanitaryPer, foodHandling;
 
 	static Scanner a = new Scanner(System.in);
 
@@ -39,14 +39,18 @@ public class Main {
 
 	public void menu() {
 
-		System.out.println("Bienvenido a la administracion del holding empresarial. Que desea hacer?");
-		System.out.println("1. Agregar nuevas empresas");
-		System.out.println("2. Generar informe de los datos de algunas empresas");
-		System.out.println("4. Salir del programa.");
+		System.out.println("**********************************************************************************");
+		System.out.println("|        Bienvenido a la administracion del holding empresarial. Que desea hacer? |");
+		System.out.println("|   1. Agregar nuevas empresas                                                    |");
+		System.out.println("|   2. Generar informe de los datos de algunas empresas                           |");
+		System.out.println("|                                                                                 |");
+		System.out.println("**********************************************************************************\n");
+
 	}
 
 	public void editLegalP() {
 
+		System.out.println("__________________________________________________________________________________");
 		System.out.println("Ingrese los datos que se le solicitan a continuacion\n");
 		System.out.println("Nombre de la empresa o institucion:");
 		name = a.nextLine();
@@ -101,7 +105,7 @@ public class Main {
 		qEmployees = a.nextInt();
 		System.out.println("Ingrese los activos (en pesos)");
 		assets = a.nextDouble();
-		System.out.println("");
+		System.out.println("__________________________________________________________________________________\n");
 
 	}
 
@@ -123,14 +127,18 @@ public class Main {
 			switch (option) {
 			case 1:
 
-				System.out.println("Este es el menu para agregar una nueva empresa:\n");
-				System.out.println("Por favor, ingrese el tipo de empresa a registrar:");
-				System.out.println("1. Tecnologica");
-				System.out.println("2. De Educacion");
-				System.out.println("3. Fabricacion de productos varios");
-				System.out.println("4. Fabricacion de medicamentos");
-				System.out.println("5. Fabricacion de alimentos \n");
-				System.out.println("0. Volver al menu anterior");
+				System.out.println("###########################################################");
+				System.out.println("#     Este es el menu para agregar una nueva empresa:     #");
+				System.out.println("#                                                         #");
+				System.out.println("# Por favor, ingrese el tipo de empresa a registrar:      #");
+				System.out.println("#   1. Tecnologica                                        #");
+				System.out.println("#   2. De Educacion                                       #");
+				System.out.println("#   3. Fabricacion de productos varios                    #");
+				System.out.println("#   4. Fabricacion de medicamentos                        #");
+				System.out.println("#   5. Fabricacion de alimentos                           #");
+				System.out.println("#   0. Volver al menu anterior                            #");
+				System.out.println("###########################################################\n");
+
 
 				option = a.nextInt();
 				while (option != 0) {
@@ -165,7 +173,7 @@ public class Main {
 
 						} while (option1 == 1);
 
-						System.out.println("¿Desea agregar mas empresas tecnologicas?\n1. Si\n2. No");
+						System.out.println("Desea agregar mas empresas tecnologicas?\n1. Si\n2. No");
 						option2 = a.nextInt();
 						switch (option2) {
 						case 1:
@@ -231,7 +239,7 @@ public class Main {
 							System.out.println("Intitucion educativa agregada con exito");
 							System.out.println("No. de intituciones educativas pertenecientes al holding: "
 									+ m.theHolding.geteCs().size());
-							System.out.println("¿Desea agregar mas intituciones educativas?\n1. Si\n2. No");
+							System.out.println("Desea agregar mas intituciones educativas?\n1. Si\n2. No");
 							option3 = a.nextInt();
 						} while (option3 == 1);
 						break;
@@ -276,7 +284,7 @@ public class Main {
 								option4 = a.nextInt();
 
 							} while (option4 == 1);
-							System.out.println("¿Desea agregar mas empresas de Fabricacion?\n1. Si\n2. No");
+							System.out.println("Desea agregar mas empresas de Fabricacion?\n1. Si\n2. No");
 							option5 = a.nextInt();
 
 						} while (option5 == 1);
@@ -384,12 +392,21 @@ public class Main {
 				break;
 
 			case 2:
+			
+				System.out.println("<*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*>");
 				System.out.println(m.theHolding.supeRString());
+				System.out.println("<*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*><*>\n");
+
 				break;
 
 			}
-			backMenu = true;
-		} while (backMenu);
+			
+			System.out.println("Escoja la opcion que desea realizar?\n1. Cerrar el programa.\n2. Volver al menu principal.");
+			backMenu = a.nextInt();
+			if(backMenu == 1){
+				System.out.println("Created by Cristhian Camilo Gutierrez Cordoba\nInfo and cheaps services : kamneklogs@gmail.com :3");
+			}
+		} while (backMenu != 1);
 
 	}
 
