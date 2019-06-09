@@ -94,7 +94,7 @@ public class UtilityC extends LegalP implements Taxes {
         return super.parcialToString() + "\nNo. de suscriptores en total:    " + subscribersT + "\n"
                 + "No. de suscriptores de estacto 3, 4, 5 y 6:    " + subscribers3456 + "\n"
                 + "Tipo de servicio prestado:     " + serviceType + "\n" + "Impuesto ProCultura:    " + tProCultura()
-                + "\n" + "Promedio encuestas de respuestas de satisfaccion:    \n" + averagePolls();
+                + "\n"  + averagePolls();
     }
 
     public String averagePolls() {
