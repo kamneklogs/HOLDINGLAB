@@ -21,7 +21,7 @@ public class Main {
 	static double qStudents12, qTStudents, subscribersT, subscribers3456;
 	static String name, nit, adress, phone, dateCreation, typeC, nameLR, providedS, idMEN, directorN, educationS, nameP,
 			idC, sanitaryR, expiration, modality;
-	static double assets, qWater;
+	static double assets, qWater, qEnergy;
 	static boolean centinel = false;
 	static boolean centinel1 = false;
 	static boolean centinel2 = false;
@@ -143,7 +143,7 @@ public class Main {
 				System.out.println("#   3. Fabricacion de productos varios                    #");
 				System.out.println("#   4. Fabricacion de medicamentos                        #");
 				System.out.println("#   5. Fabricacion de alimentos                           #");
-				System.out.println("#   6. Prestadora de servicios publicos                   #");				
+				System.out.println("#   6. Prestadora de servicios publicos                   #");
 				System.out.println("#   0. Volver al menu anterior                            #");
 				System.out.println("###########################################################\n");
 
@@ -153,8 +153,10 @@ public class Main {
 					case 1:
 
 						m.editLegalP();
+						System.out.println("Ingrese la cantidad de energia consumida en kilowatts:  ");
+						qEnergy = a.nextDouble();
 						m.theHolding.gettCs().add(new TechnologyC(name, nit, adress, phone, dateCreation, typeC, nameLR,
-								qEmployees, assets));
+								qEmployees, assets, qEnergy));
 						System.out.println(
 								"A continuacion ingrese los datos de las encuestas de satisfaccion de servicio: \n");
 						System.out.println("Numero de encuestas a registar (10 a 50): ");
@@ -213,8 +215,10 @@ public class Main {
 						switch (option2) {
 						case 1:
 							m.editLegalP();
+							System.out.println("Ingrese la cantidad de energia consumida en kilowatts:  ");
+							qEnergy = a.nextDouble();
 							m.theHolding.gettCs().add(new TechnologyC(name, nit, adress, phone, dateCreation, typeC,
-									nameLR, qEmployees, assets));
+									nameLR, qEmployees, assets, qEnergy));
 							System.out.println(
 									"A continuacion ingrese los datos de las encuestas de satisfaccion de servicio: \n");
 							System.out.println("Numero de encuestas a registar (10 a 50): ");
@@ -478,16 +482,18 @@ public class Main {
 						break;
 
 					case 6:
-						do{
+						do {
 							option6 = 0;
 							m.editLegalP();
 							System.out.println("Ingrese el numero total de suscriptores: ");
 							subscribersT = a.nextDouble();
 							System.out.println("Ingrese el numero de suscriptores de estracto 3, 4, 5 y 6: ");
 							subscribers3456 = a.nextDouble();
-							System.out.println("Escoja el tipo de servicio que se presta:\n1. Alcantarillado.\n2. Energia.\n3. Acueducto.\n");
+							System.out.println(
+									"Escoja el tipo de servicio que se presta:\n1. Alcantarillado.\n2. Energia.\n3. Acueducto.\n");
 							tUtilityS = a.nextInt();
-							m.theHolding.getuCs().add(new UtilityC(name, nit, adress, phone, dateCreation, typeC, nameLR, qEmployees, assets, subscribersT, subscribers3456, tUtilityS));
+							m.theHolding.getuCs().add(new UtilityC(name, nit, adress, phone, dateCreation, typeC,
+									nameLR, qEmployees, assets, subscribersT, subscribers3456, tUtilityS));
 							System.out.println(
 									"A continuacion ingrese los datos de las encuestas de satisfaccion de servicio: \n");
 							System.out.println("Numero de encuestas a registar (10 a 50): ");
@@ -517,10 +523,11 @@ public class Main {
 								}
 
 							}
-							System.out.println("Desea agregar mas empresas de prestacion de servicios publicos?\n1. Si.\n2. No.\n");
+							System.out.println(
+									"Desea agregar mas empresas de prestacion de servicios publicos?\n1. Si.\n2. No.\n");
 							option6 = a.nextInt();
-						}while(option6 == 1);
-					break;
+						} while (option6 == 1);
+						break;
 
 					}
 					option = 0;
