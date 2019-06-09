@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class EducationC extends LegalP implements Taxes {
 
     private String idMEN;
@@ -9,6 +11,7 @@ public class EducationC extends LegalP implements Taxes {
     private String educationS;
     private double qStudents12;
     private double qTStudents;
+    private ArrayList<Poll> polls;
 
     public EducationC(String name, String nit, String adress, String phone, String dateCreation, String typeC,
             String nameLR, int qEmployees, double assets, String idMEN, int yearsA, int ranking, String directorN,
@@ -21,6 +24,7 @@ public class EducationC extends LegalP implements Taxes {
         this.educationS = educationS;
         this.qStudents12 = qStudents12;
         this.qTStudents = qTStudents;
+        polls = new ArrayList<Poll>();
 
     }
 
@@ -87,18 +91,48 @@ public class EducationC extends LegalP implements Taxes {
                 + "Puesto nacional de la I.E (Segun Saber 11 o Saber Pro):    " + ranking + "\n"
                 + "Nombre del director:    " + directorN + "\n" + "No. estudiantes de estrato socioeconomico 1 y 2:    "
                 + qStudents12 + "\n" + "No. total de estudiantes:     " + qTStudents + "\n" + "Impuesto PROCULTURA:    "
-                + tProCultura();
+                + tProCultura() + "\n" + "Promedios de encuestas de satisfaccion: " + averagePolls() ;
     }
 
     public String tProCultura() {
-        double proC = 20-((qStudents12 / qTStudents) * 100);
+        double proC = 20 - ((qStudents12 / qTStudents) * 100);
         String tProC = " ";
-        
+
         tProC = proC + "%";
         if (proC < 0) {
             tProC = "Exhimido de impuesto";
         }
         return tProC;
+    }
+
+    public ArrayList<Poll> getPolls() {
+        return polls;
+    }
+
+    public void setPolls(ArrayList<Poll> polls) {
+        this.polls = polls;
+    }
+
+    public String averagePolls() {
+        String aPolls = " ";
+        double q1 = 0;
+        double q2 = 0;
+        double q3 = 0;
+        double factor = polls.size();
+        for (int i = 0; i < polls.size(); i++) {
+
+            q1 += polls.get(i).getService();
+            q2 += polls.get(i).getAnswerTime();
+            q3 += polls.get(i).getRelationCB();
+            
+        }
+        q1 = q1 / factor;
+        q2 = q2 / factor;
+        q3 = q3 / factor;
+        aPolls += "Promedio de satisfaccion con el Servicio prestado: " + q1 + "\n"
+                + "Promedio de satisfaccion con el Tiempo de Respuesta: " + q2 + "\n"
+                + "Promedio de satisfaccion con la relación costo/ beneficio del servicio adquirido: " + q3 + "\n";
+        return aPolls;
     }
 
 }

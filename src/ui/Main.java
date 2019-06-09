@@ -16,9 +16,9 @@ public class Main {
 	static final String CS = "COMUNALES, SOCIALES";
 
 	static int option, option1, option2, option3, option4, option5, option6, option7, option8, optStatus, optMod, cT,
-			iterator, iterator1, iterator2, iterator3, iterator4, qEmployees, yearsA, ranking,
-			qUnits, invCode, backMenu;
-	static double qStudents12, qTStudents;
+			iterator, iterator1, iterator2, iterator3, iterator4, qEmployees, yearsA, ranking, qUnits, invCode,
+			backMenu, service, answerTime, relationCB, qPolls, titirititi, tUtilityS;
+	static double qStudents12, qTStudents, subscribersT, subscribers3456;
 	static String name, nit, adress, phone, dateCreation, typeC, nameLR, providedS, idMEN, directorN, educationS, nameP,
 			idC, sanitaryR, expiration, modality;
 	static double assets, qWater;
@@ -40,12 +40,18 @@ public class Main {
 
 	public void menu() {
 
-		System.out.println("**********************************************************************************");
-		System.out.println("|        Bienvenido a la administracion del holding empresarial. Que desea hacer? |");
-		System.out.println("|   1. Agregar nuevas empresas                                                    |");
-		System.out.println("|   2. Generar informe de los datos de algunas empresas                           |");
-		System.out.println("|                                                                                 |");
-		System.out.println("**********************************************************************************\n");
+		System.out.println(
+				"**********************************************************************************************");
+		System.out.println(
+				"|        Bienvenido a la administracion del holding empresarial. Que desea hacer?            |");
+		System.out.println(
+				"|   1. Agregar nuevas empresas                                                               |");
+		System.out.println(
+				"|   2. Generar informe de los datos de algunas empresas (Junto a sus encuestas de servicio)  |");
+		System.out.println(
+				"|                                                                                            |");
+		System.out.println(
+				"**********************************************************************************************\n");
 
 	}
 
@@ -137,6 +143,7 @@ public class Main {
 				System.out.println("#   3. Fabricacion de productos varios                    #");
 				System.out.println("#   4. Fabricacion de medicamentos                        #");
 				System.out.println("#   5. Fabricacion de alimentos                           #");
+				System.out.println("#   6. Prestadora de servicios publicos                   #");				
 				System.out.println("#   0. Volver al menu anterior                            #");
 				System.out.println("###########################################################\n");
 
@@ -148,12 +155,40 @@ public class Main {
 						m.editLegalP();
 						m.theHolding.gettCs().add(new TechnologyC(name, nit, adress, phone, dateCreation, typeC, nameLR,
 								qEmployees, assets));
+						System.out.println(
+								"A continuacion ingrese los datos de las encuestas de satisfaccion de servicio: \n");
+						System.out.println("Numero de encuestas a registar (10 a 50): ");
+						qPolls = a.nextInt();
+						titirititi = 0;
+
+						while (titirititi != qPolls) {
+							titirititi++;
+							System.out.println(
+									"Ingrese las respuestas de satisfacciion de la encuesta No. " + titirititi + "\n");
+							System.out.println("1. Servicio prestado (1 a 5): ");
+							service = a.nextInt();
+							System.out.println("2. Tiempo de respuesta dado (1 a 5): ");
+							answerTime = a.nextInt();
+							System.out.println("3. La relacion costo/ beneficio del servicio adquirido (1 a 5): ");
+							relationCB = a.nextInt();
+							centinel = false;
+							while (iterator < m.theHolding.gettCs().size() && centinel == false) {
+
+								if (m.theHolding.gettCs().get(iterator).getName().equals(name) == true) {
+									m.theHolding.gettCs().get(iterator).getPolls()
+											.add(new Poll(service, answerTime, relationCB));
+									centinel = true;
+								}
+								iterator++;
+							}
+
+						}
 
 						do {
 							System.out.println(
 									"Numero de empresas tecnologicas registradas: " + m.theHolding.gettCs().size());
 							iterator = 0;
-							System.out.println("tamano de la lista de servicios: "
+							System.out.println("No. de servicios agregados: "
 									+ m.theHolding.gettCs().get(iterator).getProvidedS().size());
 							centinel = false;
 							System.out.println("Ingrese el servicio prestado:");
@@ -180,6 +215,35 @@ public class Main {
 							m.editLegalP();
 							m.theHolding.gettCs().add(new TechnologyC(name, nit, adress, phone, dateCreation, typeC,
 									nameLR, qEmployees, assets));
+							System.out.println(
+									"A continuacion ingrese los datos de las encuestas de satisfaccion de servicio: \n");
+							System.out.println("Numero de encuestas a registar (10 a 50): ");
+							qPolls = a.nextInt();
+							titirititi = 0;
+
+							while (titirititi != qPolls) {
+								titirititi++;
+								System.out.println("Ingrese las respuestas de satisfacciion de la encuesta No. "
+										+ titirititi + "\n");
+								System.out.println("1. Servicio prestado (1 a 5): ");
+								service = a.nextInt();
+								System.out.println("2. Tiempo de respuesta dado (1 a 5): ");
+								answerTime = a.nextInt();
+								System.out.println("3. La relacion costo/ beneficio del servicio adquirido (1 a 5): ");
+								relationCB = a.nextInt();
+								centinel = false;
+								while (iterator < m.theHolding.gettCs().size() && centinel == false) {
+
+									if (m.theHolding.gettCs().get(iterator).getName().equals(name) == true) {
+										m.theHolding.gettCs().get(iterator).getPolls()
+												.add(new Poll(service, answerTime, relationCB));
+										centinel = true;
+									}
+									iterator++;
+								}
+
+							}
+
 							do {
 								System.out.println(
 										"Numero de empresas tecnologicas registradas: " + m.theHolding.gettCs().size());
@@ -217,6 +281,34 @@ public class Main {
 					case 2:
 						do {
 							m.editLegalP();
+							System.out.println(
+									"A continuacion ingrese los datos de las encuestas de satisfaccion de servicio: \n");
+							System.out.println("Numero de encuestas a registar (10 a 50): ");
+							qPolls = a.nextInt();
+							titirititi = 0;
+
+							while (titirititi != qPolls) {
+								titirititi++;
+								System.out.println("Ingrese las respuestas de satisfacciion de la encuesta No. "
+										+ titirititi + "\n");
+								System.out.println("1. Servicio prestado (1 a 5): ");
+								service = a.nextInt();
+								System.out.println("2. Tiempo de respuesta dado (1 a 5): ");
+								answerTime = a.nextInt();
+								System.out.println("3. La relacion costo/ beneficio del servicio adquirido (1 a 5): ");
+								relationCB = a.nextInt();
+								centinel = false;
+								while (iterator < m.theHolding.geteCs().size() && centinel == false) {
+
+									if (m.theHolding.geteCs().get(iterator).getName().equals(name) == true) {
+										m.theHolding.geteCs().get(iterator).getPolls()
+												.add(new Poll(service, answerTime, relationCB));
+										centinel = true;
+									}
+									iterator++;
+								}
+
+							}
 							System.out.println("Ingrese el numero de registro del Ministerio Nacional de Educacion");
 							idMEN = a.nextLine();
 							idMEN = a.nextLine();
@@ -384,6 +476,51 @@ public class Main {
 						} while (option8 == 1);
 
 						break;
+
+					case 6:
+						do{
+							option6 = 0;
+							m.editLegalP();
+							System.out.println("Ingrese el numero total de suscriptores: ");
+							subscribersT = a.nextDouble();
+							System.out.println("Ingrese el numero de suscriptores de estracto 3, 4, 5 y 6: ");
+							subscribers3456 = a.nextDouble();
+							System.out.println("Escoja el tipo de servicio que se presta:\n1. Alcantarillado.\n2. Energia.\n3. Acueducto.\n");
+							tUtilityS = a.nextInt();
+							m.theHolding.getuCs().add(new UtilityC(name, nit, adress, phone, dateCreation, typeC, nameLR, qEmployees, assets, subscribersT, subscribers3456, tUtilityS));
+							System.out.println(
+									"A continuacion ingrese los datos de las encuestas de satisfaccion de servicio: \n");
+							System.out.println("Numero de encuestas a registar (10 a 50): ");
+							qPolls = a.nextInt();
+							titirititi = 0;
+
+							while (titirititi != qPolls) {
+								titirititi++;
+								System.out.println("Ingrese las respuestas de satisfacciion de la encuesta No. "
+										+ titirititi + "\n");
+								System.out.println("1. Servicio prestado (1 a 5): ");
+								service = a.nextInt();
+								System.out.println("2. Tiempo de respuesta dado (1 a 5): ");
+								answerTime = a.nextInt();
+								System.out.println("3. La relacion costo/ beneficio del servicio adquirido (1 a 5): ");
+								relationCB = a.nextInt();
+								centinel = false;
+								iterator = 0;
+								while (iterator < m.theHolding.getuCs().size() && centinel == false) {
+
+									if (m.theHolding.getuCs().get(iterator).getName().equals(name) == true) {
+										m.theHolding.getuCs().get(iterator).getPolls()
+												.add(new Poll(service, answerTime, relationCB));
+										centinel = true;
+									}
+									iterator++;
+								}
+
+							}
+							System.out.println("Desea agregar mas empresas de prestacion de servicios publicos?\n1. Si.\n2. No.\n");
+							option6 = a.nextInt();
+						}while(option6 == 1);
+					break;
 
 					}
 					option = 0;

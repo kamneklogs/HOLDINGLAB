@@ -11,6 +11,7 @@ public class Holding {
     private ArrayList<VariousPC> vCs;
     private ArrayList<MedicineC> mCs;
     private ArrayList<FoodC> fCs;
+    private ArrayList<UtilityC> uCs;
 
     public Holding(String name) {
 
@@ -20,6 +21,7 @@ public class Holding {
         vCs = new ArrayList<VariousPC>();
         mCs = new ArrayList<MedicineC>();
         fCs = new ArrayList<FoodC>();
+        uCs = new ArrayList<UtilityC>();
 
     }
 
@@ -110,39 +112,53 @@ public class Holding {
         String finalSuper = " ";
         if (tCs != null) {
             for (int i = 0; i < tCs.size(); i++) {
-                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nEMPRESAS TECNOLOGICAS:\n****************************************************************\n";
+                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nEMPRESAS TECNOLOGICAS:\n****************************************************************\n";
                 finalSuper += tCs.get(i).toString() + "\n";
             }
         }
 
         if (eCs != null) {
             for (int i = 0; i < eCs.size(); i++) {
-                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nINSTITUCIONES EDUCATIVAS:\n****************************************************************\n";
+                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nINSTITUCIONES EDUCATIVAS:\n****************************************************************\n";
                 finalSuper += eCs.get(i).toString() + "\n";
             }
         }
 
         if (vCs != null) {
             for (int i = 0; i < vCs.size(); i++) {
-                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nEMPRESAS DE FABRICACION DE PRODUCTOS VARIOS:\n****************************************************************\n";
+                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nEMPRESAS DE FABRICACION DE PRODUCTOS VARIOS:\n****************************************************************\n";
                 finalSuper += vCs.get(i).toString() + "\n";
             }
         }
 
         if (mCs != null) {
             for (int i = 0; i < mCs.size(); i++) {
-                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nEMPRESAS FARMACEUTICAS:\n****************************************************************\n";
+                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nEMPRESAS FARMACEUTICAS:\n****************************************************************\n";
                 finalSuper += mCs.get(i).toString() + "\n";
             }
 
         }
         if (fCs != null) {
             for (int i = 0; i < fCs.size(); i++) {
-                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nEMPRESAS DE COMESTIBLES:\n****************************************************************\n";
+                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nEMPRESAS DE COMESTIBLES:\n****************************************************************\n";
                 finalSuper += fCs.get(i).toString() + "\n";
             }
         }
+        if (uCs != null) {
+            for (int i = 0; i < uCs.size(); i++) {
+                finalSuper += "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\nEMPRESAS DE PRESTACION DE SERVICIOS PUBLICOS:\n****************************************************************\n";
+                finalSuper += uCs.get(i).toString() + "\n";
+            }
+        }
         return finalSuper;
+    }
+
+    public ArrayList<UtilityC> getuCs() {
+        return uCs;
+    }
+
+    public void setuCs(ArrayList<UtilityC> uCs) {
+        this.uCs = uCs;
     }
 
 }
